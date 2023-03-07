@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Awal</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #D81F26, #3C65AF);
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="greeting">Selamat Datang!</h1>
+
+
+    </div>
+
+
+    <script>
+        let namaUser = prompt('Masukan nama anda')
+        if (namaUser == '' || namaUser == null) {
+            const user = document.getElementById('greeting');
+            user.innerText = 'Selamat Datang orang misterius !';
+        }else{
+            const user = document.getElementById('greeting');
+            user.innerText = 'Selamat Datang ' + namaUser + ' !';
+        }
+
+
+    </script>
+
+</body>
+
+</html>

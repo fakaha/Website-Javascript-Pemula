@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Awal</title>
+    <link rel="icon" type="image/x-icon" href="loveIcon.png">
 
     <style>
         body {
@@ -19,6 +20,7 @@
 
         .contents {
             text-align: center;
+            margin-top: 40px;
         }
 
         span#count {
@@ -31,11 +33,16 @@
 
 <body>
 
+    <audio autoplay="true" loop="true">
+        <source src="kembali.mp3" type="audio/mpeg">
+        Browsermu tidak mendukung tag audio, upgrade donk!
+      </audio>
+
     <div class="container">
         <h1 id="greeting">Selamat Datang!</h1>
     </div>
 
-    <div class="contents">
+    <div class="contents" id="contents">
         <button id="incrementButton">Tekan aku</button> <span id="count">0</span>
         <h2 id="pesanUtama">Hai apa kabar? masih ingat aku?</h2>
     </div>
@@ -82,11 +89,13 @@
                 const pesanUtama = document.getElementById('pesanUtama');
                 pesanUtama.innerText = 'Jaga dirimu di sana ya:)';
             } else if (document.getElementById('count').innerText == 10) {
-// INI BELUM BISA
+                
                 const image = document.createElement('img');
-                image.setAttribute('src', 'https://i.ibb.co/0V49VRZ/catto.jpg');
-                const contents = document.querySelector('.contents');
-                contents.appendChild(hiddenMessage).appendChild(image);
+                image.setAttribute('src', 'quotes.jpg');
+                image.style.height = '450px';
+                const contents = document.getElementById('contents');
+                contents.appendChild(image);
+                // KETIKA APPENDCHILD SUDAH COBA PAKAI CLASS TAPI GAGAL
             }
 
         }
